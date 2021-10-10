@@ -6,7 +6,7 @@ reddit = praw.Reddit(client_id="xx1xbGxR1hbDCe1NoXjxQQ",
                      user_agent="<console:amazingbot:1.0",
                      username="allbotsaregood",
                      password="Amazingbob9")
-subreddit = reddit.subreddit("memes")
+subreddit = reddit.subreddit("cringetopia")
 
 keep_alive()
 for comment in subreddit.stream.comments():
@@ -14,7 +14,7 @@ for comment in subreddit.stream.comments():
         continue
     if "!attack" in comment.body.lower():
         print(f"https://reddit.com{comment.permalink}")
-        comment.reply('bad human')
+        #comment.reply('bad human')
         comment.upvote()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
