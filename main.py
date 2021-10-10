@@ -7,7 +7,6 @@ reddit = praw.Reddit(client_id="xx1xbGxR1hbDCe1NoXjxQQ",
                      username="allbotsaregood",
                      password="Amazingbob9")
 subreddit = reddit.subreddit("memes")
-keep_alive()
 
 for comment in subreddit.stream.comments():
     if comment.author.name == reddit.user.me().name:
