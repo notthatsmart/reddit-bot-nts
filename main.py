@@ -6,13 +6,13 @@ reddit = praw.Reddit(client_id="xx1xbGxR1hbDCe1NoXjxQQ",
                      user_agent="<console:amazingbot:1.0",
                      username="allbotsaregood",
                      password="Amazingbob9")
-subreddit = reddit.subreddit("memes")
+subreddit = reddit.subreddit("kickopenthedoor")
 
 keep_alive()
 for comment in subreddit.stream.comments():
     if comment.author.name == reddit.user.me().name:
         continue
-    if "cringe" in comment.body.lower():
+    if "!attack" in comment.body.lower():
         print(f"https://reddit.com{comment.permalink}")
         #comment.reply('bad human')
         comment.upvote()
