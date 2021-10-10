@@ -1,6 +1,5 @@
 import praw
 import time
-from keep_alive import keep_alive
 reddit = praw.Reddit(client_id="xx1xbGxR1hbDCe1NoXjxQQ",
                      client_secret="b6w50lVs3-v87ywTToOWl8C2Ogxy7g",
                      user_agent="<console:amazingbot:1.0",
