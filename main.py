@@ -12,7 +12,7 @@ keep_alive()
 for comment in subreddit.stream.comments():
     if comment.author.name == reddit.user.me().name:
         continue
-    if "satire" in comment.body.lower():
+    if "cringe" in comment.body.lower():
         print(f"https://reddit.com{comment.permalink}")
         #comment.reply('bad human')
         comment.upvote()
