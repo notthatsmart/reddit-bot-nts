@@ -1,5 +1,6 @@
 import praw
 import time
+from keep_alive import keep_alive
 reddit = praw.Reddit(client_id="xx1xbGxR1hbDCe1NoXjxQQ",
                      client_secret="b6w50lVs3-v87ywTToOWl8C2Ogxy7g",
                      user_agent="<console:amazingbot:1.0",
@@ -7,6 +8,7 @@ reddit = praw.Reddit(client_id="xx1xbGxR1hbDCe1NoXjxQQ",
                      password="Amazingbob9")
 subreddit = reddit.subreddit("memes")
 
+keep_alive()
 for comment in subreddit.stream.comments():
     if comment.author.name == reddit.user.me().name:
         continue
