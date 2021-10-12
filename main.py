@@ -6,16 +6,16 @@ reddit = praw.Reddit(client_id="NGbw1N6Q354uiLxF6Xtn3w",
                      user_agent="<console:amazingbot:2.0",
                      username="notthebottest",
                      password="Amazingbob9")
-subreddit = reddit.subreddit("kickopenthedoor")
+subreddit = reddit.subreddit("All")
 
 keep_alive()
 
 for comment in subreddit.stream.comments():
     if comment.author.name == reddit.user.me().name:
         continue
-    if "weak" in comment.body.lower():
+    if "1984" in comment.body.lower():
         print(f"https://reddit.com{comment.permalink}")
-        #comment.reply('By george orwell 1949')
+        comment.reply('1984 by george orwell 1949')
         comment.upvote()
 
 for post in subreddit.new(limit=1):
